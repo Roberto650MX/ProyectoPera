@@ -1,4 +1,67 @@
+html{
+    font-size: 62.5%; /*Esto hace un reset de rem - 62.5%=10 px de 16px*/
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
 img{
-	width: 20px;
-	height: 10px;
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+}
+.site-header.inicio{
+    /* Sirve para poner una imagen de fondo */
+    background: url(proyectoP/images/ex.jpg);
+    /* muestra la imagen desde el centro*/
+    background-position: center center;
+    /* obliga a que la imagen ocupe toda la pantalla*/
+    background-size: cover;
+    /* hace que la imagen ocupe toda tu pantalla*/
+    height: 100vh;
+    /* minimo de tamaño que tiene la imagen en cualquier dispositivo*/
+    min-height: 60rem;
+}
+.contenido-header{
+    height: 100%;
+    display: flex;
+    /*indica hacia donde iran los elementos de tu flex*/
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contenido-header h1{
+    color: black;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    /*se usa para el interlineado*/
+    line-height: 1.8;
+}
+
+.barra{
+    /*permite que los elementos se muevan en el contenedor*/
+    display: flex;
+    /*separa nuestro contenido horizontalmente*/
+    justify-content: space-between;
+    /*Alinea verticalmente con el tamaño de tu div*/
+    align-items: center;
+    /*le da un margen hacia arriba*/
+    padding-top: 3rem;
+}
+
+/*Navegacion*/
+.navegacion a{
+    color: black;
+    /*Elimina la linea debajo de los enlaces*/
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+.navegacion a:hover{
+    color: green;
+}
+/*sirve para quitarle el margen de la derecha al ultimo enlace*/
+.navegacion a:last-of-type{
+    margin-right: 0;
 }
